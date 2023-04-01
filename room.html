@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="lib/gsap/gsap.min.js" defer></script>
+	<script src="lib/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="lib/gsap/ScrollSmoother.min.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+
+    <title>Room</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+            <header id="header" class="header">
+        <div class="menu">
+            <div class="menu__main"  id="hamb">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field">
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
+                </div>
+                <div class="menu__text">MENU</div>
+            </div>
+            
+            <ul class="menuList" id="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rooms.html">Номера</a></li>
+                <li><a href="festivals.html">Фестивали бухары</a></li>
+                <li><a href="nearby.html">Достопр. рядом</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+        </div>
+
+        <div class="lang">
+            РУ<span>/УЗ</span>
+        </div>
+
+        <a href="index.html" class="logo">
+            MUKHAMMADJON
+            <span>HOTEL</span>
+        </a>
+
+        <a href="#" class="link">Вход</a>
+
+        <a href="#" class="btn">Бронировать</a>
+    </header>
+    <div class="popup" id="popup">
+        <svg id="svg1" class="svg__menu" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 684.29 138.73">
+            <path class="svg1" d="M705.87,166.37c-10,41.36-51.32,81.19-111.83,79.66-95.71-2.43-92.71-24.38-197.64-25.15S246.66,292,174.32,302c-55.15,7.62-137.07-3.11-151.89-19.19" transform="translate(-22.07 -166.25)"/>
+        </svg>
+    </div>
+    <div class="primary">
+        <img src="img/2.png" alt="Фестивалы" class="primary__img">
+        <div class="primary__title">
+            Номер стандарт
+        </div>
+    </div>
+    <div class="room__info">
+        <div class="room__info-item">
+            <div class="room__info-text">Quantity of rooms:</div>
+            <div class="room__info-num">5</div>
+        </div>
+        <div class="room__info-item">
+            <div class="room__info-text">Guests:</div>
+            <div class="room__info-num">2</div>
+        </div>
+        <div class="room__info-item">
+            <div class="room__info-text">Average area:</div>
+            <div class="room__info-num">21 m²</div>
+        </div>
+        <div class="room__info-item">
+            <div class="room__info-text">Price:</div>
+            <div class="room__info-num">$ 32</div>
+        </div>
+    </div>
+    <div class="room__content">
+        <div class="room__img-left">
+            <img src="img/4.png" alt="Alt">
+        </div>
+        <div class="room__img-right">
+            <img class="room__img-r" src="img/5.png" alt="Alt">
+            <div class="room__img-text">
+                Spacious one-room junior suites 
+                do not provide a comfortable space 
+                for comfortable rest and work.
+            </div>
+        </div>
+    </div>
+
+    <div class="room__icons">
+        <div class="room__icon">
+            <img src="img/icons/1.png" alt="Alt">
+            <p>кондиционер</p>
+        </div>
+        <div class="room__icon">
+            <img src="img/icons/2.png" alt="Alt">
+            <p>завтрак</p>
+        </div>
+        <div class="room__icon">
+            <img src="img/icons/3.png" alt="Alt">
+            <p>бар</p>
+        </div>
+        <div class="room__icon">
+            <img src="img/icons/4.png" alt="Alt">
+            <p>телевизор</p>
+        </div>
+        <div class="room__icon">
+            <img src="img/icons/5.png" alt="Alt">
+            <p>чай</p>
+        </div>
+        <div class="room__icon">
+            <img src="img/icons/6.png" alt="Alt">
+            <p>Wi-Fi</p>
+        </div>
+    </div>
+    <svg id="svg1" class="svg__icons" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700.24 130.46">
+        <path class="svg1" d="M21.14,269.86c139.39,23,208.4,2.1,275-45.19,87.32-62,177.69-70.47,248.92-74.3,69.26-3.72,142.47,10.73,176.17,18.39" transform="translate(-21.05 -149.27)"/>
+    </svg>
+
+    <!-- <div class="room__slider">
+        <div class="room__slider-img">
+            <img src="img/2.png" alt="Alt">
+        </div>
+        <div class="room__slider-img center">
+            <img src="img/4.png" alt="Alt">
+        </div>
+        <div class="room__slider-img">
+            <img src="img/3.png" alt="Alt">
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="box">
+          <img src="img/out_n.jpg">
+          
+        </div>
+        <div class="box">
+          <img src="img/in_r.jpg">
+          
+        </div>
+        <div class="box">
+          <img src="img/2.png">
+          
+        </div>
+        <div class="box">
+          <img src="img/4.png">
+          
+        </div>
+    </div>
+
+    <div class="another">
+        <div class="another__room">
+            <img class="another__img" src="img/4.png" alt="Alt">
+            <div class="anoter__content">
+                <div class="another__title">Комната люкс</div>
+                <a class="another__link" href="#">Подробнее</a>
+            </div>
+        </div>
+        <div class="another__room">
+            <img class="another__img" src="img/5.png" alt="Alt">
+            <div class="anoter__content">
+                <div class="another__title">Комната президент</div>
+                <a class="another__link" href="#">Подробнее</a>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__address">
+                <div class="footer__text">Бухарская обл, г. Бухара,</div>
+                <div class="footer__text">ул. Мехтар анбар, 163</div>
+                <a class="footer__text" href="tel:+998991234567">+998 (99) 123-45-67</a>
+                <div class="footer__text">info@mail.uz</div>
+            </div>
+            <div class="footer__links">
+                <a href="index.html" class="footer__link">Главная</a>
+                <a href="rooms.html" class="footer__link">Номера</a>
+                <a href="#" class="footer__link">О нас</a>
+                <a href="contacts.html" class="footer__link">Контакты</a>
+            </div>
+            <div class="footer__links">
+                <a href="gallery.html" class="footer__link">Галерея</a>
+                <a href="nearby.html" class="footer__link">Рядом</a>
+                <a href="festivals.html" class="footer__link">Фестивали</a>
+                <a href="faq.html" class="footer__link">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+
+</div>
+</div>
+</body>
+</html>

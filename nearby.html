@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="lib/gsap/gsap.min.js" defer></script>
+	<script src="lib/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="lib/gsap/ScrollSmoother.min.js" defer></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    
+    <title>Рядом</title>
+</head>
+<body>
+<!-- <div class="wrapper">
+<div class="content"> -->
+    <header id="header" class="header">
+        <div class="menu">
+            <div class="menu__main"  id="hamb">
+                <div class="hamb" id="hamb">
+                    <div class="hamb__field">
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
+                </div>
+                <div class="menu__text">MENU</div>
+            </div>
+            
+            <ul class="menuList" id="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="rooms.html">Номера</a></li>
+                <li><a href="festivals.html">Фестивали бухары</a></li>
+                <li><a href="nearby.html">Достопр. рядом</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+        </div>
+
+        <div class="lang">
+            РУ<span>/УЗ</span>
+        </div>
+
+        <a href="index.html" class="logo">
+            MUKHAMMADJON
+            <span>HOTEL</span>
+        </a>
+
+        <a href="#" class="link">Вход</a>
+
+        <a href="#" class="btn">Бронировать</a>
+    </header>
+    <div class="popup" id="popup">
+        <svg id="svg1" class="svg__menu" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 684.29 138.73">
+            <path class="svg1" d="M705.87,166.37c-10,41.36-51.32,81.19-111.83,79.66-95.71-2.43-92.71-24.38-197.64-25.15S246.66,292,174.32,302c-55.15,7.62-137.07-3.11-151.89-19.19" transform="translate(-22.07 -166.25)"/>
+        </svg>
+    </div>
+
+    <div class="primary">
+        <img src="img/1.jpg" alt="main" class="primary__img">
+        <div class="primary__title">
+            в самом сердце <br> бухары
+        </div>
+    </div>
+
+    <div class="blocks">
+        <svg id="svg1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 699 213.61">
+            <path class="svg1" d="M720.53,97.52c-15.73,27.07-68.94,105.7-116.42,127.91C521.39,265.26,390.94,205.52,365.4,191S195.11,98.29,228.81,71.48c59.74-45.19-2.3,78.89-42.13,128.67S95.54,266.62,22,274.36" transform="translate(-21.96 -61.25)"/>
+        </svg>
+        <div class="title">
+            Удобство выше всего!
+        </div>
+
+        <div class="subtitle">
+            Lorem, ipsum dolor sit amet consectetur 
+            adipisicing elit. Eius nulla eum earum 
+            voluptate natus itaque assumenda ipsam 
+            aut porro quos tempora dignissimos 
+            obcaecati fuga reprehenderit, eos 
+            asperiores, tenetur, laudantium labore.
+        </div>
+          
+        <div class="block block__leftimage">
+            <div class="block__image">
+                <img src="img/bukhara3.jpg" alt="Alt">
+            </div>
+            <div class="block__card">
+                <div class="block__title">
+                    Минарет "ляби-хауз"
+                </div>
+                <div class="block__text">
+                    Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. 
+                    Possimus incidunt neque sapiente 
+                    repellendus blanditiis maxime ratione 
+                    delectus, necessitatibus facere quod 
+                    nulla consectetur aliquid nemo, illum, 
+                    dicta animi? Cum, vel aut!
+                </div>
+                <a href="room.html" class="block__btn">Подробнее</a> 
+            </div>
+        </div>
+        <div class="block block__rightimage">
+            <div class="block__card">
+                <div class="block__title">
+                    Минарет "ляби-хауз"
+                </div>
+                <div class="block__text">
+                    Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. 
+                    Possimus incidunt neque sapiente 
+                    repellendus blanditiis maxime ratione 
+                    delectus, necessitatibus facere quod 
+                    nulla consectetur aliquid nemo, illum, 
+                    dicta animi? Cum, vel aut!
+                </div>
+                <a href="room.html" class="block__btn">Подробнее</a> 
+            </div>
+            <div class="block__image">
+                <img src="img/bukhara2.jpg" alt="Alt">
+            </div>
+            <svg id="svg1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 705.79 119.8">
+                <path class="svg1" d="M5.92,288.24c91.27,29.52,177.58,38.19,318.63-36,147.05-77.36,274.2-78.13,386.79-20.68" transform="translate(-5.77 -190.53)"/>
+              </svg>
+              
+        </div>
+
+        <div class="block block__leftimage">
+            <div class="block__image">
+                <img src="img/bukhara4.jpg" alt="Alt">
+            </div>
+            <div class="block__card">
+                <div class="block__title">
+                    Минарет "ляби-хауз"
+                </div>
+                <div class="block__text">
+                    Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. 
+                    Possimus incidunt neque sapiente 
+                    repellendus blanditiis maxime ratione 
+                    delectus, necessitatibus facere quod 
+                    nulla consectetur aliquid nemo, illum, 
+                    dicta animi? Cum, vel aut!
+                </div>
+                <a href="room.html" class="block__btn">Подробнее</a> 
+            </div>
+        </div>
+        <div class="block block__rightimage">
+            <div class="block__card">
+                <div class="block__title">
+                    Минарет "ляби-хауз"
+                </div>
+                <div class="block__text">
+                    Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. 
+                    Possimus incidunt neque sapiente 
+                    repellendus blanditiis maxime ratione 
+                    delectus, necessitatibus facere quod 
+                    nulla consectetur aliquid nemo, illum, 
+                    dicta animi? Cum, vel aut!
+                </div>
+                <a href="room.html" class="block__btn">Подробнее</a> 
+            </div>
+            <div class="block__image">
+                <img src="img/bukhara1.jpg" alt="Alt">
+            </div>
+
+            <svg id="svg1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 669.81 188.15">
+                <path class="svg1" d="M691.42,240c-48.25-45.19-177.42-131-228.24-65.87-65.11,83.49,68.16,23.75,0,0-41.36-9.19-224.42,163.83-280.88,163.58C118.55,337.4,95.54,266.62,22,274.36" transform="translate(-21.96 -150.04)"/>
+            </svg>
+        </div>
+    </div>
+    
+    
+    
+    
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__address">
+                <div class="footer__text">Бухарская обл, г. Бухара,</div>
+                <div class="footer__text">ул. Мехтар анбар, 163</div>
+                <a class="footer__text" href="tel:+998991234567">+998 (99) 123-45-67</a>
+                <div class="footer__text">info@mail.uz</div>
+            </div>
+            <div class="footer__links">
+                <a href="index.html" class="footer__link">Главная</a>
+                <a href="rooms.html" class="footer__link">Номера</a>
+                <a href="#" class="footer__link">О нас</a>
+                <a href="contacts.html" class="footer__link">Контакты</a>
+            </div>
+            <div class="footer__links">
+                <a href="gallery.html" class="footer__link">Галерея</a>
+                <a href="nearby.html" class="footer__link">Рядом</a>
+                <a href="festivals.html" class="footer__link">Фестивали</a>
+                <a href="faq.html" class="footer__link">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- </div>
+</div> -->
+
+</body>
+</html>
