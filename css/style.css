@@ -118,7 +118,7 @@ body {
     left: 0;
 
     width: 0px;
-    height: 80px;
+    height: 100%;
     background-color: var(--main90);
     transition: width .6s;
     z-index: -1;
