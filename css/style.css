@@ -9,10 +9,11 @@
 :root {
     --mainBlack: #141414;
     --mainWhite: #fff;
-    --main: #050331;
-    --main90: #504F6F;
+    --main: #12182B;
+    --main90: #414655;
     --mainSecond: #F3F66F;
     --second80: #F8F9A3;
+    --second60: #FBFBCE;
     --mainThird: #F1D15F;
 }
 /* scrollbar */
@@ -186,7 +187,7 @@ body {
     top: 0;
     left: 50%;
     z-index: 1;
-    height: 125%;
+    height: 130%;
     width: 1px;
     background-color: var(--main90);
 
@@ -745,7 +746,7 @@ body.noscroll {
 .reviews {
     width: 100%;
     padding: 100px 200px;
-    background-color: #fff;
+    background-color: var(--second60);
     margin-bottom: 100px;
     color: var(--main);
     text-align: center;
@@ -777,7 +778,7 @@ body.noscroll {
     width: 40%;
     margin-left: 10px;
     background-color: var(--second80);
-    padding: 40px;
+    padding: 40px 40px 0 40px;
 }
 
 .address__title {
@@ -791,8 +792,8 @@ body.noscroll {
 }
 
 .adress__address, .address__phone a, .address__mail {
-    font-size: 12px;
-    letter-spacing: 3px;
+    font-size: 14px;
+    letter-spacing: 2px;
     font-family: "montserrat";
     color: var(--main);
     line-height: 1.7;
