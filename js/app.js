@@ -1,5 +1,11 @@
 //gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-
+let currentPos = window.pageYOffset;
+const header = document.querySelector("#header");
+if (currentPos <= 10) {
+  header.classList.remove("opac1");
+} else {
+  header.classList.add('opac1');
+}
 // появление элементов при скролле
 function onEntry(entry) {
   
@@ -22,15 +28,20 @@ for (let elm of elements) {
 
 
 if (ScrollTrigger.isTouch !== 1) {
-
   let prevScrollPos = window.pageYOffset;
   window.onscroll = function () {
+    currentPos = window.pageYOffset;
     let currentScrollPos = window.pageYOffset;
     if (prevScrollPos >= currentScrollPos) {
         document.getElementById('header').style.top = '0';
     } else {
         document.getElementById('header').style.top = '-80px';
-    }
+      }
+      if (currentPos <= 10) {
+        header.classList.remove("opac1");
+      } else {
+        header.classList.add('opac1');
+      }
     prevScrollPos = currentScrollPos;
   }
 
@@ -38,7 +49,6 @@ if (ScrollTrigger.isTouch !== 1) {
   const popup = document.querySelector("#popup");
   const body = document.body;
 
-  // Клонируем меню, чтобы задать свои стили для мобильной версии
   const menu = document.querySelector("#menu").cloneNode(1);
 
   // При клике на иконку hamb вызываем ф-ию hambHandler
@@ -51,6 +61,7 @@ if (ScrollTrigger.isTouch !== 1) {
     popup.classList.toggle("open");
     hamb.classList.toggle("active");
     body.classList.toggle("noscroll");
+    header.classList.add("opac1");
     renderPopup();
   }
 
@@ -72,6 +83,9 @@ if (ScrollTrigger.isTouch !== 1) {
     popup.classList.remove("open");
     hamb.classList.remove("active");
     body.classList.remove("noscroll");
+    if (currentPos <= 0) {
+      header.classList.remove("opac1");
+    }
   };
 
 	// ScrollSmoother.create({

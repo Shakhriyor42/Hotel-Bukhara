@@ -8,20 +8,21 @@
 
 :root {
     --mainBlack: #141414;
-    --mainWhite: #fff;
-    --main: #12182B;
-    --main90: #414655;
+    --mainWhite: #0b0156;
+    --main: #FBFBCE;
+    --main90: #F8F9A3;
     --mainSecond: #F3F66F;
-    --second80: #F8F9A3;
-    --second60: #FBFBCE;
+    --second80: #0b0156;
+    --second60: #012257;
+    --second40: #3c3478;
     --mainThird: #F1D15F;
 }
 /* scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
 }
   
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
     background-color: #f9f9fd;
 }
@@ -31,10 +32,10 @@
     background-image: -webkit-gradient(linear, 0 0, 0 100%,
                       color-stop(.5, rgba(255, 255, 255, .25)),
                       color-stop(.5, transparent), to(transparent));
-}
+} */
 
 body {
-    background-color: var(--main);
+    background-color: #fff;
 }
 
 .header {
@@ -45,13 +46,22 @@ body {
 
     width: 100%;
     height: 70px;
-    background-color: var(--main);
+    background-color: rgba(11, 1, 86, 0);
     display: flex;
     align-items: center;
-    color: var(--mainWhite);
+    color: white;
     font-family: "montserrat";
-    transition: top .4s linear;
-    border-bottom: 1.5px solid var(--main90);
+    transition: top .4s ease, background-color .4s ease;
+    border-bottom: 1.5px solid rgba(60, 52, 120, 0);
+}
+
+#header.opac1 {
+    background-color: rgba(11, 1, 86, 1);
+    border-bottom: 1.5px solid rgba(60, 52, 120, 1);
+}
+
+.header.opac1 .btn {
+    border-left: 1px solid var(--second40);
 }
 
 .lang {
@@ -68,7 +78,7 @@ body {
 .logo {
     display: block;
     text-decoration: none;
-    color: var(--mainWhite);
+    color: white;
     font-size: 12px;
     line-height: 2;
     text-transform: uppercase;
@@ -87,7 +97,7 @@ body {
 }
 
 .link, .btn {
-    color: var(--mainWhite);
+    color: white;
     font-family: "montserrat";
     text-decoration: none;
     text-transform: uppercase;
@@ -107,8 +117,8 @@ body {
 }
 
 .btn {
-    border-left: 1px solid var(--main90);
     position: relative;
+    transition: .4s;
 }
 
 .btn::before {
@@ -120,7 +130,7 @@ body {
 
     width: 0px;
     height: 100%;
-    background-color: var(--main90);
+    background-color: var(--second40);
     transition: width .6s;
     z-index: -1;
 }
@@ -132,7 +142,7 @@ body {
 /* menu */
 .menu__text {
     font-size: 10px;
-    color: var(--main);
+    color: var(--second80);
     font-family: "montserrat";
     width: 70px;
     z-index: 5;
@@ -149,7 +159,7 @@ body {
     z-index: 6;
 
     font-size: 10px;
-    color: var(--mainWhite);
+    color: white;
     font-family: "montserrat";
     font-weight: 500;
     letter-spacing: 2px;
@@ -164,7 +174,7 @@ body {
     z-index: 6;
 
     font-size: 10px;
-    color: var(--mainWhite);
+    color: white;
     font-family: "montserrat";
     font-weight: 500;
     letter-spacing: 2px;
@@ -187,9 +197,9 @@ body {
     top: 0;
     left: 50%;
     z-index: 1;
-    height: 130%;
+    height: 100%;
     width: 1px;
-    background-color: var(--main90);
+    background-color: var(--second60);
 
 }
 .menu__main.active .menuList {
@@ -246,7 +256,7 @@ body {
     z-index: 2;
     height: 3px;
     width: 16px;
-    background-color: var(--main);
+    background-color: var(--second80);
     animation-name: burgerGoBack;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -269,10 +279,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--main);
+    background-color: white;
     z-index: 3;
     display: flex;
-    transition: 0.3s;
+    transition: .5s ease-in-out;
 }
 .popup.open {
     top: 0;
@@ -288,7 +298,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    padding: 100px 0;
+    padding-top: 100px;
     overflow: auto;
 }
 .popup .menuList > li {
@@ -318,8 +328,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/out_n.jpg") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -328,15 +339,15 @@ body {
 @keyframes fade-in {
     0% {
         opacity: 0;
-        top: 10%;
+        top: 45%;
     }
     50% {
         opacity: 1;
-        top: 15%;
+        top: 50%;
     }
     100% {
         opacity: 1;
-        top: 15%;
+        top: 50%;
     }
 }
 .popup .menuList > li:nth-child(2):hover::before {
@@ -346,8 +357,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/3.png") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -360,8 +372,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/festivals/gold.jpg") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -374,8 +387,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/bukhara4.jpg") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -388,8 +402,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/out_d.jpg") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -402,8 +417,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/2.png") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -416,8 +432,9 @@ body {
     height: 500px;
     display: block;
     position: fixed;
-    top: 15%;
-    left: 60%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, calc(-50% + 40px));
     background: url("../img/in.jpg") center no-repeat;
     background-size: cover;
     transition: 1s;
@@ -571,15 +588,60 @@ body.noscroll {
     margin: 100px 0 30px 60% ;
 }
 
+.btn__circle {
+    position: relative;
+    height: 120px;
+    
+    width: 30%;
+    margin: 0 0 30px 60% ;
+}
+
+.btn__circle:hover path  {
+    stroke-dashoffset: 255;
+}
+.btn__circle:hover .nearUs__link {
+    margin-left: -5px;
+}
+.btn__circle svg {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translate(-50%, -50%);
+    width: 70px;
+}
+.btn__circle path {
+    stroke-width: 2px;
+    fill: transparent;
+    stroke-dasharray: 255;
+    stroke-dashoffset: 0;
+    transition: all .6s ease;
+}
+.btn__circle img {
+    width: 1.25em;
+    height: 1.25em;
+
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translate(-0%, -35%);
+}
+
 .nearUs__link {
-    color: var(--mainWhite);
+    color: var(--second80);
     text-decoration: none;
     font-family: "Noto Serif Display";
     font-size: 24px;
-    margin: 0 0 60px 60%;
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translate(-0%, -50%);
+    transition: .6s ease;
 }
 
-.nearUs svg {
+.nearUs #svg1 {
     width: 100%;
 
     position: absolute;
@@ -679,7 +741,7 @@ body.noscroll {
     width: 30%;
     background-color: var(--second80);
     padding: 50px;
-    color: var(--main);
+    color: white;
     z-index: 2;
     min-width: 400px;
 }
@@ -689,18 +751,27 @@ body.noscroll {
 }
 
 .room__card-title {
-    font-size: 40px;
+    font-size: 35px;
     font-family: "Noto Serif Display";
     line-height: 1.1;
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .room__card-content {
     font-family: "montserrat";
-    font-size: 16px;
     line-height: 1.5;
-    opacity: .6;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.room__card-content span {
+    opacity: .8;
+}
+
+.room__card-price {
+    display: block;
+    margin-left: 0%;
 }
 
 .room__btn {
@@ -716,7 +787,7 @@ body.noscroll {
     padding: 20px 40px;
     transition: color .2s ease-in-out;
 
-    border: #050331 1px solid;
+    border: var(--main) 1px solid;
 }
 
 .room__btn::after {
@@ -874,7 +945,7 @@ body.noscroll {
 }
 
 .room__info {
-    color: var(--mainWhite);
+    color: white;
     width: 50%;
     display: flex;
     flex-wrap: wrap;
@@ -958,7 +1029,7 @@ body.noscroll {
     margin-top: 130px;
     width: 50%;
     color: var(--mainWhite);
-    opacity: .7;
+    opacity: 1;
     line-height: 1.6;
     font-size: 16px;
     font-family: "montserrat";
@@ -988,18 +1059,25 @@ body.noscroll {
 } */
 
 .room__icons {
-    width: 50%;
+    width: 100%;
+    background-color: var(--second60);
+    padding-top: 90px;
+}
+
+.room__icons-center {
+    width: 35%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 50px;
     margin-bottom: 200px;
 }
 
 .room__icon {
     width: 30%;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .room__icon img {
@@ -1008,7 +1086,7 @@ body.noscroll {
 }
 
 .room__icon p {
-    color: var(--second80);
+    color: white;
     font-family: "montserrat";
     font-size: 10px;
     font-weight: 300;
@@ -1056,11 +1134,23 @@ body.noscroll {
     overflow: hidden;
 }
 
+.another__room::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mainBlack);
+    opacity: .6;
+}
+
 .another__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.5;
+    opacity: 1;
     transition: transform .3s linear, opacity .2s linear;
 }
 
@@ -1084,14 +1174,14 @@ body.noscroll {
     font-size: 45px;
     font-family: "Noto Serif Display";
     margin-bottom: 20px;
-    color: var(--mainWhite);
+    color: white;
 }
 
 .another__link {
     display: none;
     font-size: 20px;
     font-family: "Noto Serif Display";
-    color: var(--mainWhite);
+    color: white;
     text-decoration: none;
 }
 
@@ -1166,11 +1256,20 @@ body.noscroll {
 
 .contact__content {
     width: 40%;
+    font-size: 20px;
+    font-family: "montserrat";
+    letter-spacing: 2px;
+    padding-top: 150px;
+    padding-right: 100px;
 }
 
-.contact__content div {
-    color: #fff;
+.contact__text {
+    text-decoration: none;
+    margin-bottom: 30px;
+    display: block;
+    color: var(--second80);
 }
+
 
 /* block */
 
@@ -1189,7 +1288,7 @@ body.noscroll {
 }
 
 .blocks .svg1 {
-    stroke: var(--mainWhite);
+    stroke: var(--mainThird);
     stroke-width: 1px;
     opacity: .2;
     fill: transparent;
@@ -1320,11 +1419,66 @@ body.noscroll {
 
 .primary {
     width: 100%;
-    height: 100vh;
+    
     position: relative;
     text-align: center;
     padding: 300px;
     margin-bottom: 150px;
+}
+
+.primary.index {
+    background: url(../img/out_n.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.festival {
+    background: url(../img/festivals/silk3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.festivals {
+    background: url(../img/bukhara2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.nearby {
+    background: url(../img/1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.room {
+    background: url(../img/2.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.roomsbg {
+    background: url(../img/3.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.faqbg {
+    background: url(../img/in.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.gallerybg {
+    background: url(../img/out_d.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.primary.contactbg {
+    background: url(../img/4.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .primary::after {
@@ -1337,20 +1491,12 @@ body.noscroll {
     height: 100%;
     background-color: var(--mainBlack);
     opacity: .6;
-}
-
-.primary__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     
-    object-fit: cover;
+    background-attachment: fixed;
 }
 
 .primary__title {
-    color: var(--mainWhite);
+    color: #fff;
     width: 75%;
     font-size: 70px;
     line-height: 1.2;
@@ -1437,7 +1583,7 @@ body.noscroll {
 }
 
 .faq-title:hover {
-    background-color: var(--mainSecond);
+    background-color: var(--second40);
 }
 
 .faq-input {
@@ -1451,7 +1597,7 @@ body.noscroll {
 }
 
 .faq-input:checked ~ .faq-title {
-    background-color: var(--mainSecond);
+    background-color: var(--second40);
 }
 
 .faq-input:checked ~ .faq-title:after {
